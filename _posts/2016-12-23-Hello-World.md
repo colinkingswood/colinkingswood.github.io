@@ -33,4 +33,4 @@ Can't complian about that.
 Database backed sites can be badly written or configured which leads them to run slowly. 
 
 To be fair a well written application should load quickly but it takes time and effort to tune more complex sites so that they do. 
-As this is only serving static files, there is no need for database calls (i.o. is often the bottleneck in we applications) and there is a lot less computing going on in the background. 
+As this is only serving static files, there is no need for database calls (I.O. is often the bottleneck in web applications) and there is a lot less computing going on in the background. 
