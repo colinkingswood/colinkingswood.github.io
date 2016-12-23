@@ -21,7 +21,7 @@ This gives a number of advantages
  - less to set up and configure and keep maintained, so simpler overall.
 
 #### secure
- - less security risks - with less moving parts there is a smaller [attack surface](https://en.wikipedia.org/wiki/Attack_surface) for hackers to potentially exploit. [SQL injection](https://en.wikipedia.org/wiki/SQL_injection) is an example of something that application developers need to protect against. With no database this is one less problem to work about. For me this is the main appeal of a static site generator.
+ - less security risks - with less moving parts there is a smaller [attack surface](https://en.wikipedia.org/wiki/Attack_surface) for hackers to potentially exploit. [SQL injection](https://en.wikipedia.org/wiki/SQL_injection) is an example of something that application developers need to protect against. With no database this is one less problem to worry about. For me this is the main appeal of a static site generator.
 
 
 ### It works with github pages - which offeres free hosting for Jekyll sites. 
