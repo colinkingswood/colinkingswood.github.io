@@ -10,7 +10,7 @@ Whitewater Kayaker for play.
 
 ### More Information
 
-I build complex, data-driven websites and applications. 
+I build complex, data-driven websites and applications. (As well as simple software when simle is required.) 
 
 I have over 15 years of experience building software in various languages. My current tools of choice are [Python](https://www.python.org/) and the [Django](https://www.djangoproject.com/start/overview/) web framework with a [Postgres](https://www.postgresql.org/). 
 
