@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Software Engineer and Whitewater Kayker
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+I build complex, database-driven websites and applications. 
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[colinkingswood@gmail.com](mailto:colinkingswood@gmail.com)
