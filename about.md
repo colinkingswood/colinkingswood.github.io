@@ -5,6 +5,7 @@ permalink: /about/
 ---
 
 Software Engineer for pay.
+
 Whitewater Kayaker for play.
 
 ### More Information
