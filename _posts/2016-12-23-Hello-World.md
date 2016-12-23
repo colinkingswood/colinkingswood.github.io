@@ -6,13 +6,13 @@ title: My first blog post! Why Jekyll?
 Ok, not really as I tried google blogger, and wordpress before, but didn't like them much.
 This is however my first blog post using Jekyll - a static site generator. 
 
-As a proagmatic software engineer, I usually have good reasons behind the choices I make (and I dislike the faddish nature of the software industry where something is all hyped up one month, and something else the next).
+As a proagmatic software engineer, I usually have good reasons behind the choices I make (and I dislike the faddish nature of the software industry where something is all hyped up one month, and another product the next month).
 
 ## So why Jekyll?
 
 
-Jekyll is a static site generator -the opposite of what I usually make - database driven applications. Static sites were popular in the early days of the web but gradually got overtaken by database backed sites and applicatioins of a more dynamic nature. It does have a number
-of advantages however. 
+Jekyll is a static site generator - the opposite of what I usually make - database driven applications. Static sites were popular in the early days of the web but gradually got overtaken by database backed sites and applicatioins of a more dynamic nature. 
+Static sites do have a number of advantages however. 
 
 ### No database or other "moving parts" on the server. 
 This gives a number of advantages
