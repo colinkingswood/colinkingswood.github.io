@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Software Engineer and Whitewater Kayker
+Software Engineer and Whitewater Kayaker
 
 ### More Information
 
