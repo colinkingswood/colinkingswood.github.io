@@ -14,9 +14,7 @@ Django already provides views for logging in and out, so rather than reinvent th
 
 in urls.py we add the following lines for login and logout views 
     
-<pre>
-<code class="language-python">
-from django.contrib import admin, auth
+https://en.wikipedia.org/wiki/Content_delivery_networkfrom django.contrib import admin, auth
 
 urlpatterns = [
     ...
