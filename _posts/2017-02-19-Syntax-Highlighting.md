@@ -11,7 +11,7 @@ You need to download a css file and a JavaScript library. I would have preferred
 
 ### Download Prism libraries. 
 
-This was about the only part that caused me a problem. The original tutorial I was looking at had Prism example using HTML, and CSS and was served from a [CDN](https://en.wikipedia.org/wiki/Content_delivery_network). 
+This was about the only part that caused me a problem. The original example I was looking at had Prism highlighting HTML, and CSS code and was served from a [CDN](https://en.wikipedia.org/wiki/Content_delivery_network). 
 I copied the CDN location and added it to my own HTML, and it formatted the code nicely, but didn't do the syntax highlighting that I was looking for.  
 
 Then looking at the Prism website, there are a large number of languages with checkboxes beside them. The python checbox wasn't ticked. 
