@@ -7,7 +7,7 @@ Writin a blog about coding, its useful to be able to display code in a readable 
 
 With HTML we can use the <code>&lt;pre&gt;</code> tag for preformatting things, but it doesn't do syntax highlighting. I had a look around at other code blogs did a few searches and found [Prism](http://prismjs.com/). 
 
-You need to download a css file and a JavaScript library. I would have preferred pure css, but I am not even sure if that is possible without adding a lot of classes to the HTML. It took me less than 20 minutes to get it working, so that's pretty good in terms of ease of use. 
+You need to download a CSS file and a JavaScript library. I would have preferred pure CSS, but I am not even sure if that is possible without adding a lot of classes to the HTML. It took me less than 20 minutes to get it working, so that's pretty good in terms of ease of use. 
 
 ### Download Prism libraries. 
 
@@ -25,7 +25,7 @@ Anyway, I added Python and a couple of other languages and downloaded my custom 
 
 ### Update  your HTML
 
-I added the Prism js and css files to the head of my HTML. 
+I added the Prism js and CSS files to the head of my HTML. 
  
 <pre>
 <code class="language-html">
