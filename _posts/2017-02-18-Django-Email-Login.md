@@ -3,7 +3,7 @@ layout: post
 title: Django login using email 
 ---
 
-Using an email adress rather than usrname for logging in to a Django application. 
+Using an email adress rather than username for logging in to a Django application. 
 
 ## Django auth login views
 
