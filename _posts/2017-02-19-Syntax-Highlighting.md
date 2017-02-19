@@ -19,7 +19,7 @@ Then looking at the Prism website, there are a large number of languages with ch
 ![Prism download page]({{ site.url }}/images/prism-download.png){: .center-image }
 
 
-So it turns out that you need to specify the languages you want to use and download a custom copy of Prsim (unless yoo are using the default languages). It also gives you an option to choose a different theme, so I went for a dark background. 
+So it turns out that you need to specify the languages you want to use and download a custom copy of Prsim (unless you are using the default languages). It also gives you an option to choose a different theme, so I went for a dark background. 
 
 Anyway, I added Python and a couple of other languages and downloaded my custom copy.
 
