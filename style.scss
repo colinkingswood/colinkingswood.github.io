@@ -18,7 +18,7 @@ html {
 }
 
 body {
-	background: $white;
+    background: $white;
   font: 18px/1.4 $helvetica;
   color: $darkGray;
 }
@@ -71,7 +71,7 @@ p {
 a {
   color: $blue;
   text-decoration: none;
-	cursor: pointer;
+    cursor: pointer;
   &:hover, &:active {
     color: $blue;
   }
@@ -165,8 +165,12 @@ img {
 
 .site-avatar {
   float: left;
+   width: 140px;
+   height: 140px;
+/*
   width: 70px;
   height: 70px;
+*/
   margin-right: 15px;
 
   @include mobile {
