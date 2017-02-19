@@ -3,7 +3,7 @@ layout: post
 title: Django login using email 
 ---
 
-Using an email adress rather than username for logging in to a Django application. 
+Using an email address rather than username for logging in to a Django application. 
 
 ## Django auth login views
 
@@ -14,7 +14,10 @@ Django already provides views for logging in and out, so rather than reinvent th
 
 in urls.py we add the following lines for login and logout views 
     
-https://en.wikipedia.org/wiki/Content_delivery_networkfrom django.contrib import admin, auth
+<pre>
+<code class="language-python">
+from django.contrib import admin, auth
+
 
 urlpatterns = [
     ...
