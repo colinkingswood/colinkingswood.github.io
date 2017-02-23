@@ -168,7 +168,7 @@ The code below has the same effect as the previous example for the `venuetypes` 
 
 ## Adding a data based on the logged in user
 
-In my data model every venue has a contact, which is linked to a Django auth user. Django knows who the user is so I shouldn't need to put this in the form (a hidden field would have been one option, but there is always the possibilty someone can tamper with the data baing posted). 
+In my data model every venue has a contact, which is linked to a Django auth user. Django knows who the user is so I shouldn't need to put this in the form (a hidden field would have been one option, but there is always the possibilty someone can tamper with the data being posted). 
  
 The form is responsible for saving the object, so the functionality belongs in the form. But the form does not have access to the logged in user (or the request). 
 
