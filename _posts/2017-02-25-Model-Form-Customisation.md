@@ -46,10 +46,10 @@ Here are some things that I wanted to customise on my form.
 
   * use a different widget from the dafult for that field type.
   * add some extra classes to the form elements for styling.
-  * Add a venue contact based on the logged in user.
-  * Give a required field a default value 
+  * Add a foreign key object (VenueContact) based on the logged in user.
+  * Give a *required* field a default value. 
   * Display two fields location and address (not on the Venue model).
-  * create an address object based on the above fileds. 
+  * create an Address object based on the above fileds. 
 
 I have been building a new JobSite for European Bartender School to relpace the old one. We want to take the data from the previous site and populate the new site with that data, which is fine, except the data in the old version isn't particularly clean. 
 
