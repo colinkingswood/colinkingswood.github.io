@@ -5,14 +5,14 @@ title: Django ModelForm customisation - an example with Class Based Views.
 
 Django model forms are great and easy to use if you are using them in the standard way - i.e. a one to one mapping between fields in the form and fields in the model, not doing anything unusual with them. When you want a ModelForm to do something a bit different it gets a little trickier, but it is possible to do a fair bit of cusomization and still get the benefits of using Class Based Views with ModelForms. 
 
-I neede to do a fair bit of customisation recently, so I thought it would be good to write up as an example. 
+I needed to do a fair bit of customisation recently, so I thought it would be good to write up as an example. 
 
 It's worth pointing out that if you are working with Django's class based views, then the [Classy Class-Based Views](http://ccbv.co.uk/) site is great in helping to understanding them.
 
 
 ## Class based generic views, the basics
 
-Using them with class based views you can generate a form with very little code on the Django side. 
+Using ModelForms with class based views you can generate a form with very little code on the Django side. 
 
 <pre>
 <code class="language-python">
