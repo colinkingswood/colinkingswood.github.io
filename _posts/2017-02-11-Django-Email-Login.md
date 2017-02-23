@@ -32,8 +32,9 @@ urlpatterns = [
 </pre>
 
 
+## writing a custom authentication backend
 
-I created a file backends.py and added the followin to it. 
+I created a file backends.py and added the following to it. 
 This is where Django hooks in and uses our new class / function to check the email for logging in.
 
 ModelBackend is the default Django authentication backend, so we subclass that, and override the authenticate method.
