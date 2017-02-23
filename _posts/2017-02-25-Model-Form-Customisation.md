@@ -5,7 +5,7 @@ title: Django ModelForm customisation - an example with Class Based Views.
 
 Django model forms are great and easy to use if you are using them in the standard way - i.e. a one to one mapping between fields in the form and fields in the model, not doing anything unusual with them. When you want a ModelForm to do something a bit different it gets a little trickier, but it is possible to do a fair bit of cusomization and still get the benefits of using Class Based Views with ModelForms. 
 
-I needed to do a fair bit of customisation recently, so I thought it would be good to write up as an example. 
+I needed to do a fair bit of customisation recently, so I thought it would be a good idea to write it up as an example. 
 
 It's worth pointing out that if you are working with Django's class based views, then the [Classy Class-Based Views](http://ccbv.co.uk/) site is great in helping to understanding them.
 
@@ -237,6 +237,73 @@ So in our form again, add the clean method
 </pre>
 
 So now when the form is validated, it gets / creates the extra objects that are not part of the model, and adds them to the cleaned data dictionary. 
+
+Here is the final form:
+<pre>
+<code class="language-python">
+class VenueForm(forms.ModelForm):
+
+    def __init__(self, *args, **kwargs):
+        user = kwargs.pop('user')
+        self.logged_user = user
+        super(VenueForm, self).__init__(*args, **kwargs)
+        self.fields['location'] = LocationChoiceField(queryset=WorldCity.objects.all(),
+                                                      widget=forms.Select(attrs={'class': 'location-select'}),
+                                                 )
+
+        self.fields['address'] = forms.CharField(required=True)
+        self.fields['name'].widget.attrs ={'class': 'characters-remaining' ,
+                                           'maxlength' :55 ,
+                                           }
+        self.fields['short_description'].widget = forms.Textarea(attrs = {'class': 'characters-remaining',
+                                                                           'maxlength' : 155,
+                                                                           'rows' : 4
+                                                                            })
+        self.fields['venuetypes'].widget.attrs = {'class': 'venue-type-select',}
+        self.fields['website'].widget = forms.TextInput()
+
+    class Meta:
+            model = Venue
+            fields = [ 'name', 'address', 'email', 'mobile'  , 'venuetypes',  'logo' ,'short_description', 'long_description', 'website' ]
+
+    def clean_email(self):
+        email =self.cleaned_data['email']
+        if not email:
+            email = self.logged_user.email
+        return email
+
+    def clean(self):
+        address_str = self.cleaned_data.pop('address')
+        location = self.cleaned_data.pop('location')
+        address = Address.objects.create(address1=address_str,
+                               world_city=location,
+                               city=location.city,
+                               country=location.country)
+        logged_user = self.logged_user
+        contact, created = VenueContact.objects.get_or_create(auth_user=logged_user)
+        self.cleaned_data.update({'address' : address, 'contact' : contact})
+</code>
+</pre>
+
+and the final view
+<pre>
+<code class="language-python">
+{%raw%}@method_decorator(loggedin_decorators, name='dispatch')
+class VenueCreateView(NamedFormsetsMixin, CreateWithInlinesView):
+    model = Venue
+    form_class = VenueForm
+    template_name='jobsite/venue_logged.html'
+
+    def get_success_url(self):
+        return reverse('venue_update' , kwargs={ 'pk' : self.object.id})
+
+    def get_form_kwargs(self):
+        kwargs = super(VenueCreateView, self).get_form_kwargs()
+        kwargs.update({'user' : self.request.user})
+        return kwargs{% endraw %}
+</code>
+</pre>
+
 
 (If the fields in Address have been confusing you , it's probably  because I have a `city` and `country` field for legacy data, and I want to replace this with a foreign key to the `WorldCity` table, which is prepopulated with cities, countries and their locations. When I get a chance I want to ensure that all addresses have the WordCity foreign key, and eliminate the other two fields). 
 
