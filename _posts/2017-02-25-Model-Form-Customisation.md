@@ -42,14 +42,7 @@ You still need to write the template (Django provides shortcuts for this `as_p`,
 
 When you want to do something that doesn't fit the standard way of using it, then it gets a bit trickier, but it's possible to do quite a lot of customisation. 
 
-I have been building a new JobSite for European Bartender School to relpace the old one. We want to take the data from the previous site and populate the new site with that data, which is fine, except the data in the old version isn't particularly clean. 
-
-So in my models I have a Venue model with a related Address object. Address is also used by the jobseekers, which is why it got it's own table (complete with lots of nulls to deal with the data from the old site). 
-
-       graduate >--- address ---< venue >---< venue_contacts 
-
-
-Here are some things that I wanted to customise on the form. 
+Here are some things that I wanted to customise on my form. 
 
   * use a different widget from the dafult for that field type.
   * add some extra classes to the form elements for styling.
@@ -57,6 +50,13 @@ Here are some things that I wanted to customise on the form.
   * Give a required field a default value 
   * Display two fields location and address (not on the Venue model).
   * create an address object based on the above fileds. 
+
+I have been building a new JobSite for European Bartender School to relpace the old one. We want to take the data from the previous site and populate the new site with that data, which is fine, except the data in the old version isn't particularly clean. 
+
+So in my models I have a Venue model with a related Address object. Address is also used by the jobseekers, which is why it got it's own table (complete with lots of nulls to deal with the data from the old site). 
+
+       graduate >--- address ---< venue >---< venue_contacts 
+
 
 Here's what my models looks like (well a cut down version)
 
