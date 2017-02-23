@@ -65,6 +65,7 @@ Here's what my models looks like (well a cut down version)
 class Address(models.Model):
     address1        = models.CharField(max_length=255, null=True,verbose_name='Address 1')
     address2        = models.CharField(max_length=255, null=True, blank=True,verbose_name='Address 2')
+    world_city      = models.ForeignKey('WorldCity',   null=True, blank=True)
     city            = models.CharField(max_length=255, null=True,verbose_name='City')
     zipcode         = models.CharField(max_length=50,  null=True,verbose_name='Postcode')
     country         = models.CharField(max_length=100, null=True)
@@ -237,7 +238,7 @@ So in our form again, add the clean method
 
 So now when the form is validated, it gets / creates the extra objects that are not part of the model, and adds them to the cleaned data dictionary. 
 
-(If the fields in Address are confusing you , it's probably  because I have a `city` and `country` field for legacy data, and I want to replace this with a foreign key to the `WorldCity` table, which is prepopulated with cities, countries and their locations). 
+(If the fields in Address are confusing you , it's probably  because I have a `city` and `country` field for legacy data, and I want to replace this with a foreign key to the `WorldCity` table, which is prepopulated with cities, countries and their locations. When i get a chance I want to ensure that all addresses have the WordCity foreign key, and eliminate the other two fields). 
 
 The functionality is almost all contained in the form (only added the `get_form_kwargs` method to the view)- this made the update view very easy to write, as the same form worked for that as well. If the save functionality was split between form and view, the extra code in the Views would need repeated between Create and Update views.
 
