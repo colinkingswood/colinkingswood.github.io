@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Django ModelForm customisation - an example with Class Based Views.
+title: Django ModelForm customization - an example with Class Based Views.
 ---
 
 Django model forms are great and easy to use if you are using them in the standard way - i.e. a one to one mapping between fields in the form and fields in the model, not doing anything unusual with them. When you want a ModelForm to do something a bit different it gets a little trickier, but it is possible to do a fair bit of cusomization and still get the benefits of using Class Based Views with ModelForms. 
 
-I needed to do a fair bit of customisation recently, so I thought it would be a good idea to write it up as an example. 
+I needed to do a fair bit of customization recently, so I thought it would be a good idea to write it up as an example. 
 
 It's worth pointing out that if you are working with Django's class based views, then the [Classy Class-Based Views](http://ccbv.co.uk/) site is great in helping to understanding them.
 
@@ -38,11 +38,11 @@ You still need to write the template (Django provides shortcuts for this `as_p`,
 
 
 
-## Customisation
+## Customization
 
-When you want to do something that doesn't fit the standard way of using it, then it gets a bit trickier, but it's possible to do quite a lot of customisation. 
+When you want to do something that doesn't fit the standard way of using it, then it gets a bit trickier, but it's possible to do quite a lot of customization. 
 
-Here are some things that I wanted to customise on my form. 
+Here are some things that I wanted to customize on my form. 
 
   * use a different widget from the dafult for that field type.
   * add some extra classes to the form elements for styling.
@@ -93,7 +93,7 @@ class Graduate(models.Model):
 </pre>
 
 
-## Adding extra fields, and customising widgets. 
+## Adding extra fields, and customizing widgets. 
 
 Lets start with the easiest one, adding some classs for css styling and a different widget. I have a URL field, but the validation in the browser expected the url to have "http" at the start. That is likely to cause problems for the users, and we are doing server side validation anyway, so I changed it to a text widget. 
 In addition to that I need some exta classes for css styling on some widgets. 
@@ -196,7 +196,7 @@ class VenueForm(forms.ModelForm):
         user = kwargs.pop('user')
         self.logged_user = user
         super(VenueForm, self).__init__(*args, **kwargs)
-         .... continue with form customisation below....   
+         .... continue with form customization below....   
 </code>
 </pre>
 
