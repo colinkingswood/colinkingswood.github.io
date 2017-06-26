@@ -112,7 +112,8 @@ url(r'^blog/', include(wagtail_urls)),
 
 When editing a page, there is a tab "Promote Page", which has a slug field that will be used for the url. It uses the tree structure (described below), so we would have blog/blog-article-slug for our blog posts. 
 
-![Wagtail promote page screenshot]({{ site.url }}/images/promote-tag.png)
+
+![Wagtail promote page screenshot]({{ site.url }}/images/promote-tab.png)
  
 
 Now not using urls.py leads to some new problems. I added tagging to the blog articles so admins can add tags based on subjects and users can filter the list of blog articles on these tags. 
