@@ -131,7 +131,7 @@ class BlogPageTag(TaggedItemBase):
 You will see that the BlogArticlePage above already had this listed in the content panels - this gives us a nice autocomplete in the BlogArticlePage editor:
 
 
-![Wagtail promote page screenshot]({{ site.url }}/images/tag-autocomplete.png)
+![Wagtail promote page screenshot]({{ site.url }}/images/promote-tab.png)
 
 
 Now we want to filter the blog index on these tags. 
