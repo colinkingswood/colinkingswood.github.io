@@ -111,6 +111,7 @@ url(r'^blog/', include(wagtail_urls)),
 ```
 
 When editing a page, there is a tab "Promote Page", which has a slug field that will be used for the url. It uses the tree structure (described below), so we would have blog/blog-article-slug for our blog posts. 
+
 ![Wagtail promote page screenshot]({{ site.url }}/images/promote-tag.png)
  
 
@@ -131,7 +132,7 @@ class BlogPageTag(TaggedItemBase):
 You will see that the BlogArticlePage above already had this listed in the content panels - this gives us a nice autocomplete in the BlogArticlePage editor:
 
 
-![Wagtail promote page screenshot]({{ site.url }}/images/promote-tab.png)
+![Wagtail promote page screenshot]({{ site.url }}/images/tag-autocomplete.png)
 
 
 Now we want to filter the blog index on these tags. 
