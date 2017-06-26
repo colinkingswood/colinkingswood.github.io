@@ -171,9 +171,9 @@ So the blog index is usually reached at [http://ebsmatchstaff.com/blog/](http://
 
 This is the part that confused me the most, (especially as I had messed up my install and deleted the two default pages from the database).
 
-All our pages are part of a tree structure. 
+All Wagtail pages pages are part of a tree structure. 
 
-When installing wagtail, it adds two default pages - "root" and a "welcome to wagtail" page. Everything is added as a child page of one of these. Wagtail doesn't seem offer an option to add child pages to root, so all new pages end up being a child of "welcome to wagtail". 
+When installing wagtail, it adds two default pages - "root" and a "welcome to wagtail" page. Everything is added as a child page of one of these. Wagtail doesn't seem offer an option to add child pages to root, so all new pages end up being a child of "welcome to wagtail" (you can move the page to be a child of root afterwards, but you can't add it there directly). 
 
 But I don't want "welcome to wagtail" as my top level page. That is fine. 
 

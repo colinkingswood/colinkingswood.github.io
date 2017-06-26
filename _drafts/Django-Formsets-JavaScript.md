@@ -102,7 +102,7 @@ So now when we save the form, the logged user is aded as a VenueContact.
  So how to get the template to work with the admin templates. 
  
  
- 
+```django,jinja
 <div  id="image_set-group" class="row form-field field-upload-photos has-border js-inline-admin-formset" data-inline-type="stacked" data-inline-formset="{&quot;name&quot;: &quot;#{{ venue_image_inline.prefix }}&quot;, &quot;options&quot;: {&quot;addText&quot;: &quot;Add another Venue image&quot;, &quot;deleteText&quot;: &quot;Remove&quot;, &quot;prefix&quot;: &quot;{{ venue_image_inline.prefix }}&quot;}}" >
 
     <div class="small-12 medium-4 columns field-label">
@@ -135,3 +135,4 @@ So now when we save the form, the logged user is aded as a VenueContact.
 
     </div>
 </div>
+```
